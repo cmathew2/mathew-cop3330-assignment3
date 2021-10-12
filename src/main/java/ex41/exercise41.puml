@@ -1,0 +1,27 @@
+@startuml
+
+class AlphaSort {
+- Names : List
+    - numNames: int
+    +getNames(ReadList)
+    +sortNames(ReadList)
+}
+class App {
++ void main()
+-Names : List
+ -numNames :int
+ +getlist(AlphaSort)
+ +sizeof(NameCount)
+ +printlist(AlphaSort)
+}
+
+class FileReader {
+- BufferedReader
+-Names : List
+    -numNames: int
+    +readNames(txt)
+}
+
+App o--> FileReader
+App o--> AlphaSort
+@enduml
